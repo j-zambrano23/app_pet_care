@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_higiene">
+
+    <fragment
+        android:id="@+id/nav_nutricion"
+        android:name="com.example.mipetcare.ui.nutricion.NutricionFragment"
+        android:label="@string/menu_nutricion"
+        tools:layout="@layout/fragment_nutricion" />
+
+    <fragment
+        android:id="@+id/nav_higiene"
+        android:name="com.example.mipetcare.ui.higiene.HigieneFragment"
+        android:label="@string/menu_higiene"
+        tools:layout="@layout/fragment_higiene" >
+        <action
+            android:id="@+id/action_nav_higiene_to_alimentacion2"
+            app:destination="@id/alimentacion2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_eventos"
+        android:name="com.example.mipetcare.ui.eventos.EventosFragment"
+        android:label="@string/menu_eventos"
+        tools:layout="@layout/fragment_eventos" />
+
+    <fragment
+        android:id="@+id/nav_vacunas"
+        android:name="com.example.mipetcare.ui.vacunas.VacunasFragment"
+        android:label="@string/menu_vacunas"
+        tools:layout="@layout/fragment_vacunas" />
+    <activity
+        android:id="@+id/alimentacion2"
+        android:name="com.example.mipetcare.Alimentacion"
+        android:label="activity_alimentacion"
+        tools:layout="@layout/activity_alimentacion" />
+</navigation>
